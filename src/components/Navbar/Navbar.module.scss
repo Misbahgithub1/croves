@@ -12,10 +12,8 @@
 .navSection {
   pointer-events: auto;
   background-color: transparent;
-
-  /* only vertical/horizontal padding separated for consistency */
   padding-block: 10px;
-  padding-inline: 10px; /* match top bar */
+  /* Horizontal edges from Bootstrap .container (--bs-gutter-x) */
 }
 .customBorder {
   border-top: 2px solid $border-color;

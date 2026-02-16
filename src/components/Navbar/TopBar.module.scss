@@ -1,11 +1,11 @@
 @use "../../styles/variables" as *;
 
 .topBar {
+  width: 100%;
   padding-block: 1rem;
-  padding-inline: 10px; /* match navbar horizontal padding */
   background-color: transparent;
-  /* sit above hero */
-  position: static; /* container will position it */
+  position: static;
+  /* Inner .container controls horizontal edges (Bootstrap --bs-gutter-x) */
 }
 
 .brand {

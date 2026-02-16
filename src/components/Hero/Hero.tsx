@@ -14,33 +14,35 @@ interface HeroSlide {
 const textSlides: HeroSlide[] = [
   {
     subTitle: 'KHAWAJA YANNI',
-    title: 'The new \n era of luxury',
+    title: 'The new\nera of luxury',
     description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.',
+      'Lorem Ipsum is simply dummy text of the printing and \ntypesetting industry. Lorem Ipsum.',
     ctaText: 'Book reservation now',
   },
   {
     subTitle: 'EXCLUSIVE EXPERIENCES',
-    title: 'unforgettable moments',
+    title: 'Unforgettable \n moments',
     description:
-      'Discover tailored services designed for those who appreciate the finer things in life.',
+      'Discover tailored services designed for those who appreciate\n the finer things in life.',
     ctaText: 'Explore experiences',
   },
   {
     subTitle: 'REFINED ELEGANCE',
-    title: 'Where style \n meets substance',
+    title: 'Where style\nmeets substance',
     description:
-      'Every detail is considered. Every moment is intentional. This is elevated living.',
+      'Every detail is considered.Every moment is intentional.\nThis is elevated living.',
     ctaText: 'Discover more',
   },
   {
     subTitle: 'BESPOKE HOSPITALITY',
-    title: 'Your journey \n reimagined',
+    title: 'Your journey\nreimagined',
     description:
-      'From arrival to departure, experience service that anticipates your every need.',
+      'From arrival to departure, experience service \nthat anticipates your every need. that anticipates your every need. that anticipates \nyour every need. that anticipates your every need.',
     ctaText: 'Begin your stay',
   },
 ];
+
+
 
 const Hero: React.FC = () => {
   return (
@@ -50,13 +52,12 @@ const Hero: React.FC = () => {
       </div>
       <div className={styles.darkOverlay} />
       <div className={styles.caption}>
-        {/* Same container + padding as navbar so left edge aligns with navbar */}
         <div className={`container ${styles.captionInner}`}>
           <Carousel
-            interval={5000}
+            interval={0}
             fadeDuration={400}
             ariaLabel="Hero"
-            className={styles.textCarousel}
+         
             slideClassName={styles.slideContent}
           >
             {textSlides.map((slide, index) => (

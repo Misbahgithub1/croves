@@ -23,15 +23,16 @@ const TopBar: React.FC = () => {
   ];
 
   return (
-    <div className={`${styles.topBar} container`}>      
-      <div className="row align-items-center">
-        <div className="col-6 col-md-4 d-flex align-items-center">
-          <a href="/" className={styles.brand}>
-            <img src={logoImg} alt="Logo" className={styles.logo} />
-          </a>
-        </div>
-        <div className="col-6 col-md-8">
-          <div className="d-flex justify-content-end align-items-center gap-3">
+    <div className={styles.topBar}>
+      <div className="container">
+        <div className="row align-items-center">
+          <div className="col-6 col-md-4 d-flex align-items-center">
+            <a href="/" className={styles.brand}>
+              <img src={logoImg} alt="Logo" className={styles.logo} />
+            </a>
+          </div>
+          <div className="col-6 col-md-8 d-flex justify-content-end">
+            <div className="d-flex align-items-center gap-3">
             <div className={styles.socialGroup}>
               <a href="#" aria-label="TikTok">
                 <FontAwesomeIcon icon={faTiktok} />
@@ -56,6 +57,7 @@ const TopBar: React.FC = () => {
               languages={languages}
               onChange={setLanguage}
             />
+            </div>
           </div>
         </div>
       </div>

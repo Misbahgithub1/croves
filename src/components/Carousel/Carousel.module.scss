@@ -1,7 +1,6 @@
 /**
  * Reusable Carousel component styles.
- * Layout and alignment are controlled by the parent (e.g. Hero uses
- * container + navbar-matching padding so content aligns with navbar).
+
  */
 
 .root {
@@ -23,16 +22,13 @@
 
 .indicators {
   position: absolute;
-  bottom: -9.5rem;
-  left: 28rem;
+  bottom: -5.5rem;
+  left: 33rem;
   display: flex;
   gap: 0.5rem;
   align-items: center;
   z-index: 10;
 }
-
-
-
 
 
 .indicator {
