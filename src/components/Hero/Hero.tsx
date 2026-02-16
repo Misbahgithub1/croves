@@ -7,6 +7,13 @@ import { Carousel, Button } from 'react-bootstrap';
 const Hero: React.FC = () => {
   return (
     <section className={styles.hero} id="home">
+      <div className={styles.caption}>
+        <h1>The new era of luxury</h1>
+        <p>Explore our services and get inspired by our creative solutions.</p>
+        <Button variant="primary" size="lg">
+          Get Started
+        </Button>
+      </div>
       <div className={styles.redOverlay}></div>
       <Carousel controls={false} indicators={true} fade interval={5000} className={styles.carousel}>
         {[heroImg1, heroImg1, heroImg1].map((img, index) => (
@@ -16,14 +23,7 @@ const Hero: React.FC = () => {
               src={img}
               alt={`Slide ${index + 1}`}
             />
-            asd
-            <Carousel.Caption className={styles.caption}>
-              <h1>The new era of luxury</h1>
-              <p>Explore our services and get inspired by our creative solutions.</p>
-              <Button variant="primary" size="lg">
-                Get Started
-              </Button>
-            </Carousel.Caption>
+            
           </Carousel.Item>
         ))}
       </Carousel>
