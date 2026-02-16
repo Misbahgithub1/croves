@@ -1,3 +1,32 @@
-// Text Colors
+// src/styles/_variables.scss
+// ------------------------------
+// Color, typography, spacing variables
+// ------------------------------
+
+/* Colors */
 $text-light: #e6e6e6;
 $border-color: #3d3c3c;
+$bg-default: #1a1a1a;
+$text-dark: #212529;
+
+/* Fonts */
+$font-body: 'Inter', system-ui, sans-serif;
+$font-heading: 'Playfair Display', serif;
+
+/* Font sizes */
+$font-xs: 0.8125rem; // 13px
+$font-sm: 0.9375rem; // 15px
+$font-base: 1rem;    // 16px
+$font-lg: 1.125rem;  // 18px
+$font-xl: 1.25rem;   // 20px
+
+/* Spacing / layout */
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3rem;
+
+
+$letter-spacing: 0.09rem;
+$h1-size: 4.25rem;  // 68px

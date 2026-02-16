@@ -1,24 +1,40 @@
-/* index.scss - global styles, resets, base typography */
+// src/index.scss
+@use './styles/variables' as vars;
 
+/* CSS Variables (optional for JS theme usage) */
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --color-text-light: #{vars.$text-light};
+  --color-text-dark: #{vars.$text-dark};
+  --color-border: #{vars.$border-color};
+  --color-bg-default: #{vars.$bg-default};
 }
 
-/* index.scss or App.scss global reset */
-body {
+/* Global Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: transparent; /* important for transparent nav overlay */
 }
 
 html, body, #root {
   height: 100%;
   width: 100%;
+}
+
+/* Base body styles */
+body {
+  font-family: vars.$font-body;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: var(--color-bg-default);
+  color: vars.$text-light;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
