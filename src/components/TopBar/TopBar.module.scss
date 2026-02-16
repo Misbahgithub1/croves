@@ -28,14 +28,6 @@
   object-fit: contain;
 }
 
-.brandText {
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    sans-serif;
-}
 
 .socialGroup {
   display: flex;
@@ -82,24 +74,24 @@
   border: 1px solid rgba(15, 23, 42, 0.12);
   border-radius: 16px;
   padding: 0.35rem 0.95rem;
-  background-color: #ffffff;
   width: 142px;
   height: 48px;
-  color: #0f172a;
+  color: #fff;
   font-size: 0.85rem;
   font-weight: 500;
   letter-spacing: 0.04em;
   text-transform: none;
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    sans-serif;
-  transition: background-color 150ms ease-out, color 150ms ease-out,
-    border-color 150ms ease-out, box-shadow 150ms ease-out;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  transition: background 150ms ease-out, color 150ms ease-out, border-color 150ms ease-out, box-shadow 150ms ease-out;
+
+  /* Gradient Background */
+  background: linear-gradient(to bottom, #AD8749, #DCBB75);
 }
 
 .loginButton:hover {
-  background-color: #0f172a;
+ background: linear-gradient(to bottom, #9c783e, #DCBB75);
   color: #ffffff;
-  border-color: #0f172a;
+ 
   box-shadow: 0 10px 26px rgba(15, 23, 42, 0.28);
 }
 

@@ -10,18 +10,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-
-//  Override Bootstrap variables (before import)
-$primary: #1a73e8;
-
-/* Links default */
-a {
-  font-weight: 500;
-  color: $primary;
-  text-decoration: inherit;
-}
-a:hover {
-  color: $primary;
+/* index.scss or App.scss global reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: transparent; /* important for transparent nav overlay */
 }
 
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}

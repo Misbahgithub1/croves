@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Navbar.module.scss';
+import TopBar from '../TopBar/TopBar';
 
 type NavKey =
   | 'home'
@@ -22,27 +23,17 @@ const Navbar: React.FC = () => {
   ];
 
   return (
+   <>
+
+   <TopBar/>
     <nav
-      className={`navbar navbar-expand-lg navbar-light bg-white ${styles.navbar}`}
+      className={`navbar navbar-expand-lg ${styles.navbar}`}
     >
       <div className="container">
-        <a className={`navbar-brand ${styles.brand}`} href="#home">
-          <span className={styles.brandAccent} />
-          <span className={styles.brandText}>BrandName</span>
-        </a>
-        <button
-          className={`navbar-toggler ${styles.toggler}`}
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#mainNavbar"
-          aria-controls="mainNavbar"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon" />
-        </button>
+       
+   
         <div className="collapse navbar-collapse" id="mainNavbar">
-          <ul className={`navbar-nav ms-auto ${styles.navList}`}>
+          <ul className={`navbar-nav ${styles.navList}`}>
             {navItems.map((item) => (
               <li className="nav-item" key={item.key}>
                 <a
@@ -58,14 +49,11 @@ const Navbar: React.FC = () => {
               </li>
             ))}
           </ul>
-          <div className={styles.navCtaWrapper}>
-            <a href="#contact" className={styles.navCtaButton}>
-              Get Started
-            </a>
-          </div>
+    
         </div>
       </div>
     </nav>
+   </>
   );
 };
 
