@@ -1,5 +1,7 @@
 
-import viteLogo from '/vite.svg'
+import TopBar from './components/TopBar/TopBar';
+import Navbar from './components/Navbar/Navbar';
+import Hero from './components/Hero/Hero';
 import './App.scss'
 
 function App() {
@@ -7,9 +9,9 @@ function App() {
 
   return (
     <>
-      <span>test</span>
-
-      <h1>Hello World</h1>
+      <TopBar />
+      <Navbar />
+      <Hero />
        
     </>
   )

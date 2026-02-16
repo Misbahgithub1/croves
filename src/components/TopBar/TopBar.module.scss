@@ -1,0 +1,121 @@
+.topBar {
+  padding-block: 1rem;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  
+}
+
+
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+ 
+}
+
+.logo img {
+  width: 100%;
+  
+  object-fit: contain;
+}
+
+.brandText {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    sans-serif;
+}
+
+.socialGroup {
+  display: flex;
+  gap: 0.75rem;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+   
+    
+    color: #a1a1a1;
+    font-size: 1.2rem;
+    transition: all 0.2s ease;
+
+    &:hover {
+       background-color: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+  }
+}
+
+
+.socialIcon:hover {
+  background-color: #0f172a;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.25);
+}
+
+.socialLabel {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    sans-serif;
+}
+
+.loginButton {
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 16px;
+  padding: 0.35rem 0.95rem;
+  background-color: #ffffff;
+  width: 142px;
+  height: 48px;
+  color: #0f172a;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    sans-serif;
+  transition: background-color 150ms ease-out, color 150ms ease-out,
+    border-color 150ms ease-out, box-shadow 150ms ease-out;
+}
+
+.loginButton:hover {
+  background-color: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.28);
+}
+
+
+
+@media (max-width: 575.98px) {
+  .brandText {
+    display: none;
+  }
+
+  .loginButton {
+    display: none;
+  }
+
+  .languageButton {
+    padding-inline: 0.6rem;
+  }
+}
+

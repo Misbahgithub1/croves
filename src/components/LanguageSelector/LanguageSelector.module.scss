@@ -1,0 +1,114 @@
+
+
+.languageDropdown {
+  position: relative; 
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ===============================
+   Button Styling
+   =============================== */
+
+.languageButton {
+  display: flex !important;
+  align-items: center;
+  gap: 0.5rem;
+
+  font-weight: 500;
+
+
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  // Remove default Bootstrap caret
+  &::after {
+    display: none !important;
+  }
+
+  span {
+    color: #fff;
+    font-size: 0.85rem;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+
+.downArrow {
+  display: inline-block;
+  width: 10px;   // width of triangle
+  height: 6px;   // height of triangle
+
+  position: relative;
+
+  // Use border for outline
+  border-left: 2px solid #28a745;   // green left edge
+  border-right: 2px solid #28a745;  // green right edge
+  border-bottom: 2px solid #28a745; // green bottom edge
+
+  transform: rotate(45deg); // rotate to point down
+  margin-right: 0.5rem;
+}
+
+
+/* ===============================
+   Dropdown Menu
+   =============================== */
+
+.menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+
+  min-width: 160px;
+  margin-top: 0.5rem;
+
+  padding: 0.5rem 0;
+
+  border-radius: 6px;
+  border: none;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+  z-index: 2000 !important; 
+}
+
+/* ===============================
+   Dropdown Items
+   =============================== */
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  font-size: 0.85rem;
+
+  padding: 0.5rem 1rem;
+
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
+/* ===============================
+   Flag Styling
+   =============================== */
+
+.flag {
+  width: 20px;
+  height: 14px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+/* Font Awesome arrow styling */
+.arrow {
+  color: #a1a1a1; 
+  margin-right: 0rem;
+  font-size: 1.2rem;
+}
