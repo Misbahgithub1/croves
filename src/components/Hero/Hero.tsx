@@ -7,6 +7,7 @@ import { Carousel, Button } from 'react-bootstrap';
 const Hero: React.FC = () => {
   return (
     <section className={styles.hero} id="home">
+      <div className={styles.redOverlay}></div>
       <Carousel controls={false} indicators={true} fade interval={5000} className={styles.carousel}>
         {[heroImg1, heroImg1, heroImg1].map((img, index) => (
           <Carousel.Item key={index}>
