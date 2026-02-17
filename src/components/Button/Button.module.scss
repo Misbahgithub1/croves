@@ -39,3 +39,14 @@
     right: 4%;
   }
   
+  .rtl {
+    direction: rtl;
+  }
+
+  .arrowRtl {
+    right: auto;
+    left: 4%;
+    padding-left: 0;
+    padding-right: 2rem;
+    transform: scaleX(-1);
+  }

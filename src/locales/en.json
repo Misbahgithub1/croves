@@ -1,0 +1,117 @@
+{
+  "languageSelector": {
+    "placeholder": "Select Language",
+    "english": "English",
+    "arabic": "Arabic"
+  },
+  "hero": {
+    "slides": [
+      {
+        "subTitle": "KHAWAJA YANNI",
+        "title": "The new\nera of luxury",
+        "description": "Lorem Ipsum is simply dummy text of the printing and \ntypesetting industry. Lorem Ipsum.",
+        "ctaText": "Book reservation now"
+      },
+      {
+        "subTitle": "EXCLUSIVE EXPERIENCES",
+        "title": "Unforgettable \n moments",
+        "description": "Discover tailored services designed for those who appreciate\n the finer things in life.",
+        "ctaText": "Explore experiences"
+      },
+      {
+        "subTitle": "REFINED ELEGANCE",
+        "title": "Where style\nmeets substance",
+        "description": "Every detail is considered.Every moment is intentional.\nThis is elevated living.",
+        "ctaText": "Discover more"
+      },
+      {
+        "subTitle": "BESPOKE HOSPITALITY",
+        "title": "Your journey\nreimagined",
+        "description": "From arrival to departure, experience service \nthat anticipates your every need. ",
+        "ctaText": "Begin your stay"
+      }
+    ]
+  },
+  "navbar": {
+    "navItems": {
+      "dine": "Dine With Us",
+      "visit": "Plan Your Visit",
+      "events": "Events",
+      "map": "View Groves Map",
+      "story": "Our Story",
+      "contact": "Contact Us"
+    }
+  },
+  "topBar": {
+    "homeAriaLabel": "Home",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "mallSection": {
+    "heading": "Mall Of: Endless Possibilities",
+    "intro": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "price": "25 SR/GUEST",
+    "cardTitle": "Get your General Access Ticket",
+    "cardDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+  },
+  "attractionsSection": {
+    "heading": "Book General Access ticket and\nenjoy the attractions for free",
+    "button": "Book General Access Ticket",
+    "sliderTitles": [
+      "Little Krazy",
+      "Hawanim Groves City",
+      "Picnic Market",
+      "Lucawa",
+      "The Grove"
+    ]
+  },
+  "cuisineSection": {
+    "heading": "Experience the Finest Cuisine",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "cards": [
+      { "name": "Vida Vera", "subText": "100 SR PER GUEST" },
+      { "name": "Zama Zulu", "subText": "100 SR PER GUEST" },
+      { "name": "The Grove", "subText": "85 SR PER GUEST" },
+      { "name": "Harrods", "subText": "120 SR PER GUEST" }
+    ],
+    "viewAriaPrefix": "View"
+  },
+  "experienceSection": {
+    "heading": "Curate your experience as you like",
+    "button": "Book Tickets",
+    "sliderTitles": [
+      "Resturants",
+      "Experiences",
+      "Picnic Market",
+      "Events",
+      "Experiences",
+      "Resturants"
+    ]
+  },
+  "mapSection": {
+    "subTitle": "EXPERIENCE THE GROVES",
+    "heading": "Find your place",
+    "description": "Our interactive map will show you the way to the \nshops and restaurants that you want to see.",
+    "button": "Open the Map",
+    "mapTitle": "Interactive Groves Map"
+  },
+  "footer": {
+    "ctaHeading": "Join us for an\nunforgettable experience",
+    "downloadHeading": "DOWNLOAD THE GROVES APP",
+    "downloadGoogleAlt": "Google Play Store",
+    "downloadAppleAlt": "Apple App Store",
+    "locationHeading": "LOCATION",
+    "locationLinks": ["About Us", "Careers", "Press"],
+    "hoursHeading": "WORKING HOURS",
+    "hoursLinks": ["Blog", "Help Center", "Privacy Policy"],
+    "guestServiceHeading": "GUEST SERVICE CALL",
+    "guestServiceLinks": ["Blog", "Help Center", "Privacy Policy"],
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "copyright": "© 2023 The Groves for Entertainment",
+    "logoAlt": "The Groves Logo"
+  },
+  "loginButton": {
+    "text": "Log in"
+  }
+}

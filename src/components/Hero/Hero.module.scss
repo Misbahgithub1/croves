@@ -123,3 +123,16 @@
 
 }
 
+.heroRtl {
+  direction: rtl;
+
+  .darkOverlay {
+    left: auto;
+    right: 0;
+  }
+
+  .captionInner {
+    text-align: right;
+  }
+}
+

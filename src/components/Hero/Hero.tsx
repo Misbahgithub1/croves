@@ -3,6 +3,9 @@ import Carousel from '../Carousel';
 import styles from './Hero.module.scss';
 import heroImg1 from '../../assets/images/hero1.png';
 import Button from '../Button/Button';
+import type { LanguageCode } from '../LanguageSelector/LanguageSelector';
+import enTranslations from '../../locales/en.json';
+import arTranslations from '../../locales/ar.json';
 
 interface HeroSlide {
   subTitle: string;
@@ -11,42 +14,23 @@ interface HeroSlide {
   ctaText: string;
 }
 
-const textSlides: HeroSlide[] = [
-  {
-    subTitle: 'KHAWAJA YANNI',
-    title: 'The new\nera of luxury',
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and \ntypesetting industry. Lorem Ipsum.',
-    ctaText: 'Book reservation now',
-  },
-  {
-    subTitle: 'EXCLUSIVE EXPERIENCES',
-    title: 'Unforgettable \n moments',
-    description:
-      'Discover tailored services designed for those who appreciate\n the finer things in life.',
-    ctaText: 'Explore experiences',
-  },
-  {
-    subTitle: 'REFINED ELEGANCE',
-    title: 'Where style\nmeets substance',
-    description:
-      'Every detail is considered.Every moment is intentional.\nThis is elevated living.',
-    ctaText: 'Discover more',
-  },
-  {
-    subTitle: 'BESPOKE HOSPITALITY',
-    title: 'Your journey\nreimagined',
-    description:
-      'From arrival to departure, experience service \nthat anticipates your every need. ',
-    ctaText: 'Begin your stay',
-  },
-];
+interface HeroProps {
+  language: LanguageCode;
+}
 
+const translations = {
+  en: enTranslations,
+  ar: arTranslations,
+} as const;
 
-
-const Hero: React.FC = () => {
+const Hero: React.FC<HeroProps> = ({ language }) => {
+  const t = translations[language] || translations.en;
+  const textSlides = t.hero.slides as HeroSlide[];
   return (
-    <section className={styles.hero} id="home">
+    <section
+      className={`${styles.hero} ${language === 'ar' ? styles.heroRtl : ''}`}
+      id="home"
+    >
       <div className={styles.heroBackground} aria-hidden="true">
         <img src={heroImg1} alt="" />
       </div>
@@ -57,7 +41,7 @@ const Hero: React.FC = () => {
             interval={0}
             fadeDuration={400}
             ariaLabel="Hero"
-         
+            isRtl={language === 'ar'}
             slideClassName={styles.slideContent}
           >
             {textSlides.map((slide, index) => (
@@ -72,7 +56,11 @@ const Hero: React.FC = () => {
                   ))}
                 </h1>
                 <p className={styles.description}>{slide.description}</p>
-                <Button text={slide.ctaText} showArrow={true} />
+                <Button
+                  text={slide.ctaText}
+                  showArrow={true}
+                  isRtl={language === 'ar'}
+                />
               </React.Fragment>
             ))}
           </Carousel>

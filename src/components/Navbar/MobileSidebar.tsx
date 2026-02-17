@@ -6,6 +6,8 @@ import SocialMedia from "../SocialMedia/SocialMedia";
 import logoImg from "../../assets/images/logo.png";
 import LanguageSelector, { type LanguageCode, type LanguageOption } from "../LanguageSelector/LanguageSelector";
 import LoginButton from "../LoginButton/LoginButton";
+import enTranslations from "../../locales/en.json";
+import arTranslations from "../../locales/ar.json";
 
 type NavKey = "dine" | "visit" | "events" | "map" | "story" | "contact";
 
@@ -31,6 +33,13 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({
   onLanguageChange,
 }) => {
   const closeBtnRef = useRef<HTMLButtonElement>(null);
+
+  const translations = {
+    en: enTranslations,
+    ar: arTranslations,
+  } as const;
+
+  const t = translations[language] || translations.en;
 
   // Focus the close button when sidebar opens
   useEffect(() => {
@@ -106,7 +115,7 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({
             languages={languages}
             onChange={onLanguageChange}
           />
-         <LoginButton />
+         <LoginButton text={t.loginButton.text} />
           <SocialMedia fontSize="1.25rem" className={styles.footerIcons} />
         </div>
       </aside>

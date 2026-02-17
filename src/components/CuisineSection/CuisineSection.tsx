@@ -2,6 +2,9 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import styles from './CuisineSection.module.scss';
+import type { LanguageCode } from '../LanguageSelector/LanguageSelector';
+import enTranslations from '../../locales/en.json';
+import arTranslations from '../../locales/ar.json';
 
 export interface CuisineCardItem {
   name: string;
@@ -10,40 +13,46 @@ export interface CuisineCardItem {
   href?: string;
 }
 
-const CARDS: CuisineCardItem[] = [
-  {
-    name: 'Vida Vera',
-    subText: '100 SR PER GUEST',
-    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop',
-  },
-  {
-    name: 'Zama Zulu',
-    subText: '100 SR PER GUEST',
-    image: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&h=400&fit=crop',
-  },
-  {
-    name: 'The Grove',
-    subText: '85 SR PER GUEST',
-    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=400&fit=crop',
-  },
-  {
-    name: 'Harrods',
-    subText: '120 SR PER GUEST',
-    image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&h=400&fit=crop',
-  },
-];
+interface CuisineSectionProps {
+  language: LanguageCode;
+}
 
-export default function CuisineSection() {
+const translations = {
+  en: enTranslations,
+  ar: arTranslations,
+} as const;
+
+export default function CuisineSection({ language }: CuisineSectionProps) {
+  const t = translations[language] || translations.en;
+
+  const CARDS: CuisineCardItem[] = [
+    {
+      name: t.cuisineSection.cards[0].name,
+      subText: t.cuisineSection.cards[0].subText,
+      image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop',
+    },
+    {
+      name: t.cuisineSection.cards[1].name,
+      subText: t.cuisineSection.cards[1].subText,
+      image: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&h=400&fit=crop',
+    },
+    {
+      name: t.cuisineSection.cards[2].name,
+      subText: t.cuisineSection.cards[2].subText,
+      image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=400&fit=crop',
+    },
+    {
+      name: t.cuisineSection.cards[3].name,
+      subText: t.cuisineSection.cards[3].subText,
+      image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&h=400&fit=crop',
+    },
+  ];
   return (
     <section className={styles.section}>
       <Container>
         <div className={styles.header}>
-          <h2 className={styles.heading}>Experience the Finest Cuisine</h2>
-          <p className={styles.description}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-            has been the industry's standard dummy text ever since the 1500s, when an unknown
-            printer took a galley of type and scrambled it to make a type specimen book.
-          </p>
+          <h2 className={styles.heading}>{t.cuisineSection.heading}</h2>
+          <p className={styles.description}>{t.cuisineSection.description}</p>
         </div>
 
         <Row className="g-4">
@@ -60,7 +69,7 @@ export default function CuisineSection() {
                     <button
                       type="button"
                       className={styles.arrowButton}
-                      aria-label={`View ${card.name}`}
+                      aria-label={`${t.cuisineSection.viewAriaPrefix} ${card.name}`}
                     >
                       <FontAwesomeIcon icon={faArrowRight} />
                     </button>

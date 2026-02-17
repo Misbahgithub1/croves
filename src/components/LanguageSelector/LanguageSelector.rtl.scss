@@ -1,0 +1,13 @@
+.language-selector-rtl {
+  direction: rtl;
+  text-align: right;
+
+  .languageButton {
+    flex-direction: row-reverse;
+  }
+
+  .menuItem {
+    flex-direction: row-reverse;
+  }
+}
+

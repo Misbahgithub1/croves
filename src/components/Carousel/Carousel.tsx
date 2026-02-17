@@ -14,6 +14,8 @@ export interface CarouselProps {
   className?: string;
 
   slideClassName?: string;
+
+  isRtl?: boolean;
 }
 
 const DEFAULT_INTERVAL = 5000;
@@ -26,6 +28,7 @@ const Carousel: React.FC<CarouselProps> = ({
   ariaLabel = 'Carousel',
   className = '',
   slideClassName = '',
+  isRtl = false,
 }) => {
   const slides = React.Children.toArray(children).filter(Boolean);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -68,7 +71,7 @@ const Carousel: React.FC<CarouselProps> = ({
 
   return (
     <div
-      className={`${styles.root} ${className}`.trim()}
+      className={`${styles.root} ${isRtl ? styles.rootRtl : ''} ${className}`.trim()}
       role="region"
       aria-roledescription="carousel"
       aria-label={ariaLabel}

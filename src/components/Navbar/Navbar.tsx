@@ -6,28 +6,30 @@ import type { LanguageCode, LanguageOption } from "../LanguageSelector/LanguageS
 import enFlag from "../../assets/images/en.png";
 import arFlag from "../../assets/images/ar.png";
 import MobileSidebar from "./MobileSidebar";
+import enTranslations from "../../locales/en.json";
+import arTranslations from "../../locales/ar.json";
 
 type NavKey = "dine" | "visit" | "events" | "map" | "story" | "contact";
-
-const navItems: { key: NavKey; label: string; href: string }[] = [
-  { key: "dine", label: "Dine With Us", href: "#dine" },
-  { key: "visit", label: "Plan Your Visit", href: "#visit" },
-  { key: "events", label: "Events", href: "#events" },
-  { key: "map", label: "View Groves Map", href: "#map" },
-  { key: "story", label: "Our Story", href: "#story" },
-  { key: "contact", label: "Contact Us", href: "#contact" },
-];
 
 const languages: LanguageOption[] = [
   { code: "en", label: "English", flag: enFlag },
   { code: "ar", label: "العربية", flag: arFlag },
 ];
 
-const Navbar: React.FC = () => {
+const translations = {
+  en: enTranslations,
+  ar: arTranslations,
+} as const;
+
+interface NavbarProps {
+  language: LanguageCode;
+  onLanguageChange: (code: LanguageCode) => void;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ language, onLanguageChange }) => {
   const [activeItem, setActiveItem] = useState<NavKey>("dine");
   const [scrolled, setScrolled] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [language, setLanguage] = useState<LanguageCode>("en");
 
   const closeSidebar = useCallback(() => setSidebarOpen(false), []);
   const openSidebar = useCallback(() => setSidebarOpen(true), []);
@@ -47,6 +49,17 @@ const handleNavClick = useCallback((key: NavKey) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const t = translations[language] || translations.en;
+
+  const navItems: { key: NavKey; label: string; href: string }[] = [
+    { key: "dine", label: t.navbar.navItems.dine, href: "#dine" },
+    { key: "visit", label: t.navbar.navItems.visit, href: "#visit" },
+    { key: "events", label: t.navbar.navItems.events, href: "#events" },
+    { key: "map", label: t.navbar.navItems.map, href: "#map" },
+    { key: "story", label: t.navbar.navItems.story, href: "#story" },
+    { key: "contact", label: t.navbar.navItems.contact, href: "#contact" },
+  ];
+
   return (
     <>
       <div className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
@@ -54,7 +67,7 @@ const handleNavClick = useCallback((key: NavKey) => {
           onMenuClick={openSidebar}
           menuExpanded={sidebarOpen}
           language={language}
-          onLanguageChange={(code: LanguageCode) => setLanguage(code)}
+          onLanguageChange={onLanguageChange}
         />
         {/* Desktop menu */}
         <div className={`${styles.customBorder} d-none d-lg-block`}>
@@ -85,7 +98,7 @@ const handleNavClick = useCallback((key: NavKey) => {
         onNavClick={handleNavClick}
         language={language}
         languages={languages}
-        onLanguageChange={setLanguage}
+          onLanguageChange={onLanguageChange}
       />
     </>
   );
