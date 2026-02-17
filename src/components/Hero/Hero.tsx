@@ -54,7 +54,7 @@ const Hero: React.FC = () => {
       <div className={styles.caption}>
         <div className={`container ${styles.captionInner}`}>
           <Carousel
-            interval={4000}
+            interval={0}
             fadeDuration={400}
             ariaLabel="Hero"
          
@@ -63,7 +63,7 @@ const Hero: React.FC = () => {
             {textSlides.map((slide, index) => (
               <React.Fragment key={index}>
                 <p className={styles.subTitle}>{slide.subTitle}</p>
-                <h1>
+                <h1 className={styles.heading}>
                   {slide.title.split('\n').map((line, i) => (
                     <React.Fragment key={i}>
                       {i > 0 && <br />}
