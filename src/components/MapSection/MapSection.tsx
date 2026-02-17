@@ -7,7 +7,7 @@ export default function MapSection() {
     return (
         <section className={styles.section}>
             <Container>
-                <Row className="align-items-center">
+                <Row className="align-items-center gy-4 gy-md-0 gx-md-5">
                     {/* Left Column - 4 units */}
                     <Col md={6}>
                     <div className={styles.mapWrapper}>
