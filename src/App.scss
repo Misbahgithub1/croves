@@ -3,16 +3,12 @@
 // Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
-// Bootstrap
-@import "bootstrap/scss/bootstrap";
-
 // App-specific typography
 body {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   line-height: 1.6;
   color: #e6e6e6; // can also use vars.$text-light
-  
 }
 
 h1, h2, h3, h4, h5, h6 {
