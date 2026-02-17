@@ -38,7 +38,7 @@ const Hero: React.FC<HeroProps> = ({ language }) => {
       <div className={styles.caption}>
         <div className={`container ${styles.captionInner}`}>
           <Carousel
-            interval={0}
+            interval={5000}
             fadeDuration={400}
             ariaLabel="Hero"
             isRtl={language === 'ar'}
