@@ -95,7 +95,7 @@ export default function MasonryCarousel({
           </div>
         ))}
       </div>
-{/* 
+
       {showIndicators && total > 1 && (
         <div className={styles.indicators} role="tablist" aria-label="Carousel slides">
           {items.map((_, index) => (
@@ -110,7 +110,7 @@ export default function MasonryCarousel({
             />
           ))}
         </div>
-      )} */}
+      )}
     </div>
   );
 }

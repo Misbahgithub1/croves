@@ -26,14 +26,14 @@ export default function ExperienceSection() {
 
           {/* Right Column - 8 units */}
           <Col md={9} className={styles.rightCol}>
-            {/* Example: image, video, or carousel placeholder */}
-            <div className={styles.placeholder}>
+          
+           
             <MasonryCarousel
           items={SLIDER_ITEMS}
           interval={4500}
           ariaLabel="Attractions carousel"
         />
-            </div>
+           
           </Col>
         </Row>
       </Container>

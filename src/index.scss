@@ -26,11 +26,22 @@ body {
   font-family: vars.$font-body;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: var(--color-bg-default);
   color: vars.$text-light;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Full viewport height, gradient fixed */
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    vars.$gradient-green-start 0%,
+    vars.$gradient-green-end 100%
+  );
+  background-repeat: no-repeat;     // gradient repeat na ho
+  background-attachment: fixed;     // scroll par same position me rahe
+  background-size: cover;           // poora viewport cover kare
 }
+
 
 /* Images */
 img {

@@ -2,17 +2,17 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 import styles from './Carousel.module.scss';
 
 export interface CarouselProps {
-  /** Slide content: each child is one slide */
+  
   children: React.ReactNode;
-  /** Auto-advance interval in ms. Set to 0 to disable. */
+ 
   interval?: number;
-  /** Fade transition duration in ms */
+  
   fadeDuration?: number;
-  /** Accessible label for the carousel region */
+  
   ariaLabel?: string;
-  /** Optional class for the root element */
+ 
   className?: string;
-  /** Optional class for the slide content wrapper (e.g. for min-height from parent) */
+
   slideClassName?: string;
 }
 
