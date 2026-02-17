@@ -1,0 +1,137 @@
+@use "../../styles/variables" as *;
+
+.section {
+  background-color: #283606;
+  padding: 4rem 0;
+}
+
+.header {
+  text-align: left;
+  margin-bottom: 2.5rem;
+}
+
+.heading {
+  font-family: $font-heading;
+  font-size: clamp(1.75rem, 4vw, $h2-size);
+  font-weight: $light-weight;
+  color: $text-white;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  max-width: 32ch;
+}
+
+.carouselWrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0.5rem 0 1.5rem;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.card {
+  flex: 0 0 min(280px, 75vw);
+  scroll-snap-align: center;
+  text-align: center;
+  border-radius: 16px;
+  padding: 4px;
+  transition: box-shadow 0.35s ease, border-color 0.35s ease;
+  border: 2px solid transparent;
+
+
+}
+
+.cardImage {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+  background: rgba(0, 0, 0, 0.2);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    vertical-align: middle;
+  }
+
+  &.portrait {
+    aspect-ratio: 3 / 4;
+  }
+
+  &.landscape {
+    aspect-ratio: 4 / 3;
+  }
+
+  &.square {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+.cardTitle {
+  font-family: $font-heading;
+  font-size: $font-lg;
+  font-weight: 500;
+  color: $text-white;
+  margin: 0;
+  padding: 0 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  &:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.8);
+    outline-offset: 2px;
+  }
+}
+
+.dotActive {
+  background-color: #fff;
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 0;
+  }
+
+  .header {
+    margin-bottom: 2rem;
+  }
+
+  .card {
+    flex: 0 0 min(240px, 72vw);
+  }
+}
