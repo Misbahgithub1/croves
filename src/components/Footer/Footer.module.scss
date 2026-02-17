@@ -168,11 +168,11 @@ a {
       .heading {
         font-size: 1.5rem;
         max-width: 100%;
-        text-align: center;
+        text-align: left;
       }
   
       .downloadList {
-        justify-content: center;
+        justify-content: flex-start;
         margin-top: 1rem;
   
         li a img {
@@ -188,12 +188,12 @@ a {
       /* Third Row */
       .LinksRow {
         justify-content: center;
-        text-align: center;
+        text-align: left;
         margin-bottom: 1rem;
       }
   
       .footerIcons {
-        justify-content: center !important;
+        justify-content: flex-start !important;
         margin-top: 1rem;
       }
   
@@ -201,13 +201,13 @@ a {
       .copyrightRow {
         flex-direction: column;
         gap: 0.75rem;
-        align-items: center;
-        text-align: center;
+        align-items: left;
+        text-align: left;
       }
   
       /* Payment Methods */
       .paymentWrapper {
-        justify-content: center;
+        justify-content: flex-start;
         margin-top: 1rem;
       }
   
