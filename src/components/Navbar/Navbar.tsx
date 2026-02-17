@@ -76,7 +76,7 @@ const handleNavClick = useCallback((key: NavKey) => {
         </div>
       </div>
 
-      {/* Mobile Sidebar */}
+      
       <MobileSidebar
         isOpen={sidebarOpen}
         onClose={closeSidebar}

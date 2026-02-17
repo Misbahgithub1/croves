@@ -54,7 +54,7 @@ const Hero: React.FC = () => {
       <div className={styles.caption}>
         <div className={`container ${styles.captionInner}`}>
           <Carousel
-            interval={2000}
+            interval={4000}
             fadeDuration={400}
             ariaLabel="Hero"
          

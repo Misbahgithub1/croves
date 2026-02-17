@@ -15,81 +15,64 @@
   }
 }
 
-.navSection {
-  pointer-events: auto;
-  background-color: transparent;
-  padding-block: 10px;
-  /* Horizontal edges from Bootstrap .container (--bs-gutter-x) */
-}
-
 .customBorder {
   border-top: 2px solid $border-color;
   border-bottom: 2px solid $border-color;
 }
 
+.navSection {
+  pointer-events: auto;
+  background-color: transparent;
+  padding-block: 10px;
+}
+
 .navList {
-
   list-style: none;
   margin: 0;
-
-
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   gap: 0.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-ul.navList {
+  li a {
+    position: relative;
+    padding: 0.6rem 0.9rem;
+    font-size: $font-xs;
+    font-weight: 500;
+    color: $text-light; 
+    font-family: $font-body;
+    text-decoration: none;
+    transition: color 0.15s ease-out;
 
-  list-style: none;
-  margin: 0;
+    &:hover {
+      color: $text-white; 
+    }
 
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0.9rem;
+      right: 0.9rem;
+      bottom: -0.1rem;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #ad8749, #dcbb75);
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 150ms ease-out;
+    }
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0%;
-}
-
-.navLink {
-  position: relative;
-  padding-inline: 0.9rem;
-  padding-block: 0.6rem;
-  font-size: $font-xs;
-
-  font-weight: 500;
-  color: $text-light !important;
-  font-family: $font-body;
-  transition: color 120ms ease-out;
-
-  &:hover {
-    color: #0f172a;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0.9rem;
-    right: 0.9rem;
-    bottom: -0.1rem;
-    height: 2px;
-    border-radius: 999px;
-    background: linear-gradient(90deg, #ad8749, #dcbb75);
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: transform 150ms ease-out;
-  }
-
-  &:hover::after {
-    transform: scaleX(1);
+    &:hover::after {
+      transform: scaleX(1);
+    }
   }
 }
 
 .navLinkActive {
-  color: #0f172a;
+  color: $text-white; 
 
   &::after {
     transform: scaleX(1);
   }
 }
-
