@@ -148,9 +148,6 @@ position: absolute;
 }
 
 
-
-
-
 // ################# MEDIA QUERY FOR SPECIFIC MOBILE DEVICE ############3
 
 @media (min-width: 370px) 
@@ -170,6 +167,71 @@ padding: 1rem;
   }
 
 }
+}
+
+// ############## MOBILE LANDSCAPE (small height) ################
+
+@media (max-width: 767px) and (orientation: landscape) {
+  .sidebar {
+    height: 100vh;
+  }
+
+  .sidebarHeader {
+    padding: 0.75rem 1.5rem;
+  }
+
+  .sidebarLogo img {
+    width: 150px;
+  }
+
+  .sidebarActions {
+    padding: 1.5rem 1rem;
+    gap: $spacing-md;
+    flex: 1;
+    overflow-y: auto;
+  }
+
+  .sidebarNav li {
+    padding: 0.9rem 1rem;
+    font-size: $font-sm;
+  }
+
+  .footerIcons {
+    position: static;
+    margin-top: auto;
+    padding: 1rem 1rem 1.5rem;
+  }
+}
+
+// ############## TABLET (portrait & landscape) ################
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .sidebar {
+    width: 70%;
+    max-width: 420px;
+    margin-left: auto;
+    border-radius: 16px 0 0 16px;
+    box-shadow: -8px 0 32px rgba(0, 0, 0, 0.25);
+  }
+
+  .sidebarHeader {
+    padding: 1.25rem 2rem;
+  }
+
+  .sidebarActions {
+    padding: 2rem 1.5rem 1.75rem;
+    gap: $spacing-lg;
+  }
+
+  .sidebarNav li {
+    padding: 1.1rem 1.25rem;
+  }
+
+  .footerIcons {
+    position: static;
+    margin-top: auto;
+    padding: 1rem 1.5rem 2rem;
+  }
 }
 
 
