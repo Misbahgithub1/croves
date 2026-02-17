@@ -8,6 +8,7 @@ import CuisineSection from './components/CuisineSection/CuisineSection';
 import './App.scss'
 import ExperienceSection from './components/ExperienceSection/ExperienceSection';
 import MapSection from './components/MapSection/MapSection';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
 
       <ExperienceSection/>
       <MapSection/>
+      <Footer/>
     </>
   )
 }

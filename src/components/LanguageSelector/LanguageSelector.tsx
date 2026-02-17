@@ -13,7 +13,7 @@ export interface LanguageOption {
 
 interface LanguageSelectorProps {
   currentLanguage: LanguageCode;
-  languages?: LanguageOption[]; // optional to prevent undefined
+  languages?: LanguageOption[]; 
   onChange: (code: LanguageCode) => void;
 }
 
@@ -35,7 +35,7 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
         data-bs-toggle="dropdown"
         aria-expanded="false"
       >
-        {/* LEFT Font Awesome arrow */}
+      
         <FontAwesomeIcon icon={faAngleDown} className={styles.arrow} />
 
         {activeLanguage ? (

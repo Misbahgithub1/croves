@@ -1,0 +1,123 @@
+@use "../../styles/variables" as *;
+.footer {
+   
+    color: $text-light;
+    padding: 3rem 0;
+    font-family: $font-body;
+    font-size: $font-xs;
+  
+    .logo {
+      max-width: 160px;
+      margin-bottom: 1rem;
+    }
+  
+    .heading {
+        font-family: $font-heading;
+        font-size: clamp(1.75rem, 4vw, $h2-size);
+        font-weight: $light-weight;
+        color: $text-white;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+        max-width: 32ch;
+      }
+  
+    .subHeading {
+        font-family: $font-body;
+     letter-spacing: $letter-spacing-sm;
+      font-weight: 300;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      font-size: $font-xs;
+    }
+  
+    .links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  
+      li {
+        margin-bottom: 0rem;
+  
+        a {
+          color: #ccc;
+          text-decoration: none;
+  
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+  
+    .footerLink {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 0.25rem;
+  
+      &:hover {
+        color: #fff;
+      }
+    }
+  
+    .separator {
+      margin: 0 0.25rem;
+      color: #ccc;
+    }
+
+
+
+    .downloadList {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 1rem; 
+      
+        li a img {
+          height: 50px; 
+          width: auto;
+          transition: transform 0.2s;
+      
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+
+
+
+      .LinksRow {
+       
+        flex-wrap: wrap;
+        align-items: center;
+       
+        justify-content: space-between;
+      
+        a {
+          color: #ccc;
+          text-decoration: none;
+          font-size: 0.9rem;
+      
+          &:hover {
+            color: #fff;
+          }
+        }
+      
+        .appLogo {
+          height: 40px;
+          width: auto;
+        }
+
+
+      .footerBottomRow{
+        display: flex;
+    gap: 3rem;
+    padding-top: 2rem;
+      }
+      
+       
+      }
+      
+      
+  }
+  

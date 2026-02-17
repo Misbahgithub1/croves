@@ -2,27 +2,30 @@
 
 
 .SocialMedia {
+  display: flex;
+  gap: 0.75rem;
+
+  a {
     display: flex;
-    gap: 0.75rem;
-  
-    a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  
-      width: 32px;
-      height: 32px;
-  
-        color: $text-light !important;
-      font-size: 1.2rem;
-      transition: all 0.2s ease;
-  
-      &:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-        color: #fff;
-      }
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    color: $text-light !important;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    &.filledIcon {
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.05);
     }
   }
+}
+
   
   .socialIcon:hover {
     background-color: #0f172a;

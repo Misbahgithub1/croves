@@ -3,9 +3,6 @@ import styles from './TopBar.module.scss';
 import logoImg from '../../assets/images/logo.png';
 import LanguageSelector from '../LanguageSelector/LanguageSelector';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faTiktok, faInstagram, faSnapchat } from '@fortawesome/free-brands-svg-icons';
-
 import type {
   LanguageCode,
   LanguageOption,
@@ -35,7 +32,7 @@ const TopBar: React.FC = () => {
           <div className="col-6 col-md-8 d-flex justify-content-end">
             <div className="d-flex align-items-center gap-3">
 
-              <SocialMedia />
+            <SocialMedia fontSize="1.2rem" />
 
               <button type="button" className={styles.loginButton}>
                 Log in
