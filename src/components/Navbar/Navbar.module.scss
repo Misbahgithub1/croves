@@ -13,9 +13,7 @@
     background-color: rgba(0, 0, 0, 0.85);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   }
-  
-  
-
+}
 
 .navSection {
   pointer-events: auto;
@@ -23,6 +21,7 @@
   padding-block: 10px;
   /* Horizontal edges from Bootstrap .container (--bs-gutter-x) */
 }
+
 .customBorder {
   border-top: 2px solid $border-color;
   border-bottom: 2px solid $border-color;
@@ -32,19 +31,19 @@
 
   list-style: none;
   margin: 0;
- 
+
 
   gap: 0.5rem;
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
 }
 
 ul.navList {
-  
+
   list-style: none;
   margin: 0;
-  
+
 
   display: flex;
   justify-content: space-between;
@@ -56,16 +55,11 @@ ul.navList {
   position: relative;
   padding-inline: 0.9rem;
   padding-block: 0.6rem;
-  font-size: 0.8125rem; /* 13px in rem */
+  font-size: $font-xs;
+
   font-weight: 500;
   color: $text-light !important;
-  font-family:
-    "Inter",
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
+  font-family: $font-body;
   transition: color 120ms ease-out;
 
   &:hover {
@@ -98,4 +92,4 @@ ul.navList {
     transform: scaleX(1);
   }
 }
-}
+
